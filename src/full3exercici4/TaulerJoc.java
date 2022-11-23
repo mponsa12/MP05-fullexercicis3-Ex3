@@ -1,6 +1,6 @@
 package full3exercici4;
 
-//import java.awt.event.KeyEvent;
+import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent; // No utilitza JavaFX i ho hauria de fer?
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent; // Fer que importi de Java Beans i no de JavaFX
+//import javafx.scene.input.KeyEvent; // Fer que importi de Java Beans i no de JavaFX
 import javafx.scene.paint.Color;
 //import javafx.stage.WindowEvent; // El de la llibreria javafx no té el mètode necessari
 import javax.swing.JFrame;
@@ -75,6 +75,12 @@ public class TaulerJoc {
         root = new Group();
         scene = new Scene(root, ampladaTauler, alturaTauler, Color.BLACK);
 
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                initFX();
+            }
+        });
     }
 
     private void initFX() {
