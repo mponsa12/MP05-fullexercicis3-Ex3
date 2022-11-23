@@ -245,7 +245,7 @@ public class TaulerJoc {
 	public void pause()
 	{
             try { Thread.sleep(18); }
-            catch (Exception e) {};
+            catch (InterruptedException e) {}
 	}
 
 	/** 

@@ -21,8 +21,8 @@ public class Ball {
     private double xSpeed;
     private double ySpeed;
 
-    private double GRAVITY = 0.2;
-    private double FRICTION = 0.9;
+    private final double GRAVITY = 0.2;
+    private final double FRICTION = 0.9;
     /**
      * Obtains the current position of this Ball.
      * @return the X coordinate of this Ball within the GameArena.
@@ -78,7 +78,11 @@ public class Ball {
     }
 
 
-    /******************************************************/
+    /**
+     * @param x
+     * @param y
+     * @param diameter
+     * @param col****************************************************/
 
     public Ball(double x, double y, double diameter, String col)
     {
